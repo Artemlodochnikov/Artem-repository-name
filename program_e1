@@ -1,0 +1,11 @@
+n = int(input("kolvo stok:"))  # Ввод количества строк
+list = []  # Создание списка
+A = "\n"  # Создание переменной для перехода на другую строку
+for i in range(0, n):  # Запись n количества задач
+    data = input("zadachi:")  # Запись задачи
+    list.append(data)  # добавление задачи в список
+    with open('Test.txt', 'a', encoding="UTF-8") as file:
+        # Запись задач в файл в разные строчки
+        file.write(data)
+        file.write(A)
+print(list)  # Проверка создания списка
