@@ -1,0 +1,11 @@
+import secrets
+import string
+
+
+a = input("Создать логин и пароль?:")
+if a == "Да":
+    alphabet = string.ascii_letters + string.digits
+    password = " ".join(secrets.choice(alphabet) for i in range(20))
+    with open("Password.txt", "a", encoding="UTF-8") as file:
+        data = password
+        file.write(data)
